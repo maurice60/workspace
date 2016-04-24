@@ -1,0 +1,21 @@
+package pe057;
+
+class Work57 {
+
+	private static Long num1 = 1L;;
+	private static Long den1 = 1L;
+	
+	public static long doIt() {
+		for (int i = 0; i < 10; i++) {
+			nextIter();
+		}
+		return 0;
+	}
+	
+	private static void nextIter() {
+		long numT = num1, denT = den1;
+		num1 = num1 + 2*den1;
+		den1 = numT + den1;
+		System.out.println(num1+" "+den1);
+	}
+}

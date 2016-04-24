@@ -1,0 +1,72 @@
+package pe060;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+import numbers.Numbers;
+
+class Work60 {
+
+	private static Numbers num = new Numbers();
+	private static ArrayList<Long> PRIMES = findPrimes(100000000);
+	
+	private static ArrayList<Long> findPrimes(int t) {
+		ArrayList<Long> l = new ArrayList<>();
+		num.findPrimesLessThan(t);
+		for (long i : num.primesList()) {
+			if (i == 2) continue;
+			l.add(i);
+		}
+		return l;
+	}
+	
+	private static boolean check(List<Long> xs, long y) {
+		for (long x : xs) {
+			long t1 = x * ((int) (Math.pow(10, (int) Math.log10(y) + 1))) + y;
+			if (!PRIMES.contains(t1)) return false;
+			long t2 = y * ((int) (Math.pow(10, (int) Math.log10(x) + 1))) + x;
+			if (!PRIMES.contains(t2)) return false;
+		}
+		return true;
+	}
+
+	private static ArrayList<Long> find(ArrayList<Long> fnd, int pos) {
+		try {
+			if (fnd.size() == 5) return fnd;
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if (pos == PRIMES.size()) {
+				int ix = fnd.size() - 1;
+				System.out.println(ix);
+				long o = fnd.remove(ix);
+				if (o < 0) return fnd;
+				return find(fnd, PRIMES.indexOf(o + 1));
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		try {
+			if (check(fnd, PRIMES.get(pos))) {
+				fnd.add(PRIMES.get(pos));
+				return find(fnd, ++pos);
+			}
+		} catch (Exception e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return find(fnd, ++pos);
+	}
+	
+	public static Long doIt() {
+		long ans = 0;
+		ArrayList<Long> l = new ArrayList<>();
+		ArrayList<Long> f = find(l, 0);
+		System.out.println(f);
+		return ans;
+	}
+}

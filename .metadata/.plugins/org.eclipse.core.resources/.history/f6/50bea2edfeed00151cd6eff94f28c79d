@@ -1,0 +1,8 @@
+package pe057;
+
+class Work57 {
+	
+	private long doIt() {
+		return 0;
+	}
+}

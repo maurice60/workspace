@@ -1,0 +1,18 @@
+package pe033;
+
+public class PE033 {
+
+	public static void main(String[] args) {
+		double div;
+		for (int i = 1; i < 10; i++) {
+			for (int j = 1; j < 10; j++) {
+				if (j == i) continue;
+				div = (int) i / j * 1e6;
+				if (10*i+j / 10*j+i * 1e6 == div) System.out.println(i+" "+j);		
+				if (10*j+i / 10*i+j * 1e6 == div) System.out.println(i+" "+j);		
+			}
+		}
+
+	}
+
+}

@@ -1,0 +1,47 @@
+package pe061;
+
+import java.util.ArrayList;
+
+import numbers.Numbers;
+
+class Work61 {
+
+	private static ArrayList<Long> n3 = new ArrayList<>();
+	private static ArrayList<Long> n4 = new ArrayList<>();
+	private static ArrayList<Long> n5 = new ArrayList<>();
+	private static ArrayList<Long> n6 = new ArrayList<>();
+	private static ArrayList<Long> n7 = new ArrayList<>();
+	private static ArrayList<Long> n8 = new ArrayList<>();
+	
+	private static void getNumbers() {
+		long i = 1, x;
+		Numbers num = new Numbers();
+		do {
+			x = num.squareNumber(i);
+			if (x > 1000 && x < 10000) n4.add(x);
+			x = num.pentagonalNumber(i);
+			if (x > 1000 && x < 10000) n5.add(x);
+			x = num.hexagonalNumber(i);
+			if (x > 1000 && x < 10000) n6.add(x);
+			x = num.heptagonalNumber(i);
+			if (x > 1000 && x < 10000) n7.add(x);
+			x = num.octagonalNumber(i);
+			if (x > 1000 && x < 10000) n8.add(x);
+			x = num.triangleNumber(i++);
+			if (x > 1000 && x < 10000) n3.add(x);
+		} while (x < 10000);
+//		System.out.println(n3);
+//		System.out.println(n4);
+//		System.out.println(n5);
+//		System.out.println(n6);
+//		System.out.println(n7);
+//		System.out.println(n8);
+	}
+	
+	public static long doIt() {
+		long ans = 0;
+		getNumbers();
+		ans = n3.size()+n4.size()+n5.size()+n6.size()+n7.size()+n8.size();
+		return ans;
+	}
+}

@@ -1,0 +1,43 @@
+package pe061;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+
+import numbers.Numbers;
+
+class Work61 {
+
+	private static HashMap<Long, ArrayList<Long>> nums = new HashMap<>();
+
+	private static void addToNums(long x) {
+		long h = x / 100, l = x % 100;
+		if (!nums.containsKey(h)) nums.put(h, new ArrayList<>());
+		nums.get(h).add(l);
+	}
+	
+	private static void getNumbers() {
+		long i = 1, x;
+		Numbers num = new Numbers();
+		do {
+			x = num.squareNumber(i);
+			if (x > 1000 && x < 10000) addToNums(x);
+			x = num.pentagonalNumber(i);
+			if (x > 1000 && x < 10000) addToNums(x);
+			x = num.hexagonalNumber(i);
+			if (x > 1000 && x < 10000) addToNums(x);
+			x = num.heptagonalNumber(i);
+			if (x > 1000 && x < 10000) addToNums(x);
+			x = num.octagonalNumber(i);
+			if (x > 1000 && x < 10000) addToNums(x);
+			x = num.triangleNumber(i++);
+			if (x > 1000 && x < 10000) addToNums(x);
+		} while (x < 10000);
+	}
+	
+	public static long doIt() {
+		long ans = 0;
+		getNumbers();
+		ans = nums.size();
+		return ans;
+	}
+}

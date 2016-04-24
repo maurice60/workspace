@@ -1,0 +1,10 @@
+package pe055;
+
+class Work55 {
+
+	public static long doIt() {
+		long ans = 0;
+		
+		return ans;
+	}
+}

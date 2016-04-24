@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;numbers.pascal&apos; to &apos;Pascal&apos;&#x0A;- Original project: &apos;maurice&apos;&#x0A;- Original element: &apos;numbers.pascal&apos;&#x0A;- Renamed element: &apos;numbers.Pascal&apos;&#x0A;- Update references to refactored element&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;pascal&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;numbers{pascal.java[pascal" matchStrategy="1" name="Pascal" qualified="false" references="true" similarDeclarations="false" stamp="1457982188815" textual="false" version="1.0"/>
+</session>

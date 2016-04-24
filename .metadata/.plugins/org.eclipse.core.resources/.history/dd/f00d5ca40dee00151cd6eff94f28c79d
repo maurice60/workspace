@@ -1,0 +1,24 @@
+package pe057;
+
+class Work57 {
+
+	private static Long num = 1L;;
+	private static Long den = 1L;
+	
+	public static long doIt() {
+		long ans = 0;
+		for (int i = 0; i < 10; i++) {
+			nextIter();
+			if (Math.log10(num) > Math.log10(den)) ans += 1;
+			
+		}
+		return ans;
+	}
+	
+	private static void nextIter() {
+		long numT = num;
+		num = num + 2*den;
+		den = numT + den;
+//		System.out.println(num1+" "+den1);
+	}
+}

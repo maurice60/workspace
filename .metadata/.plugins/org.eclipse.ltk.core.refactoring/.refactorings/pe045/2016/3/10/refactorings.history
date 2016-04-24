@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;pe045/blurb&apos; to &apos;blurb.txt&apos;" description="Rename resource &apos;blurb&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="blurb" name="blurb.txt" stamp="1457365401785" updateReferences="true"/>
+</session>

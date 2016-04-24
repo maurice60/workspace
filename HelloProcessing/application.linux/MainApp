@@ -1,0 +1,4 @@
+#!/bin/sh
+
+APPDIR=$(dirname "$0")
+java  -Djava.library.path="$APPDIR" -cp "$APPDIR/lib/MainApp.jar:$APPDIR/lib/resources.jar:$APPDIR/lib/rt.jar:$APPDIR/lib/jsse.jar:$APPDIR/lib/jce.jar:$APPDIR/lib/charsets.jar:$APPDIR/lib/jfr.jar:$APPDIR/lib/mongo-java-driver-3.0.0.jar:$APPDIR/lib/cldrdata.jar:$APPDIR/lib/dnsns.jar:$APPDIR/lib/jfxrt.jar:$APPDIR/lib/localedata.jar:$APPDIR/lib/nashorn.jar:$APPDIR/lib/sunec.jar:$APPDIR/lib/sunjce_provider.jar:$APPDIR/lib/sunpkcs11.jar:$APPDIR/lib/zipfs.jar:$APPDIR/lib/MRJToolkit.jar:$APPDIR/lib/jogl-all.jar:$APPDIR/lib/core.jar:$APPDIR/lib/gluegen-rt-natives-macosx-universal.jar:$APPDIR/lib/gluegen-rt.jar:$APPDIR/lib/jogl-all-natives-macosx-universal.jar" MainApp

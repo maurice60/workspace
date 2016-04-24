@@ -1,0 +1,26 @@
+package pe050;
+
+import numbers.Numbers;
+
+public class Work050 {
+	public static long doIt() {
+		Numbers num = new Numbers();
+		long ans = 0, t = 0;
+		num.findPrimesLessThan(1000);
+		for (int i = 0; i < num.primeCount() - 1; i++) {
+			if (t > num.primeCount() - i) break;
+			long sum = num.primesList().get(i);
+			for (int j = i+1; j < num.primeCount(); j++) {
+				sum += num.primesList().get(j); 
+				if (sum > num.primeSeed()) break;
+				if (num.isPrime(sum) && j - i > t) {
+					t = j - i;
+					ans = sum;		
+
+				}
+			}
+		}
+		System.out.println(t);
+		return ans;
+	}
+}
