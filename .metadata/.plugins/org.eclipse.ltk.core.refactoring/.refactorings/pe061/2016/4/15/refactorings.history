@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Work61.java&apos; to &apos;pe061/src/pe061&apos;&#x0A;- Original project: &apos;pe061&apos;&#x0A;- Destination element: &apos;pe061/src/pe061&apos;&#x0A;- Original element: &apos;pe061.Work61.java&apos;" description="Copy compilation unit" destination="/src&lt;pe061" element1="/src&lt;pe061{Work61.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1460826693988" units="1" version="1.0"/>
-</session>

@@ -5,7 +5,6 @@
 	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/core.jar"/>
 	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/gluegen-rt-natives-macosx-universal.jar"/>
 	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/gluegen-rt.jar"/>
-	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/jna.jar"/>
 	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/jogl-all-natives-macosx-universal.jar"/>
 	<classpathentry kind="lib" path="/Users/maurice/Documents/Processing/libraries/jogl-all.jar"/>
 	<classpathentry kind="output" path="bin"/>

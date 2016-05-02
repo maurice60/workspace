@@ -256,7 +256,13 @@ public class Numbers {
     
     public long squareNumber(long n) {return n*n;}
 
-    public long pentagonalNumber(long n) {return n*(3*n-1)/2;}
+    public boolean isSquareNumber(long t) {
+    	Double sqr = Math.sqrt(t);
+    	if (Math.floor(sqr) == sqr) return true;
+    	else return false;
+    }
+    
+   public long pentagonalNumber(long n) {return n*(3*n-1)/2;}
 
     public ArrayList<Long> pentagonalNumberList(int n) {
         ArrayList<Long> ans = new ArrayList<>();
@@ -280,8 +286,20 @@ public class Numbers {
     
     public long heptagonalNumber(long n) {return n*(5*n-3)/2;}
     
+    public boolean isHeptagonalNumber(long t) {
+    	Double sqr = Math.sqrt(9 + 40*t);
+    	if (Math.floor(sqr) == sqr && ((long) (3 + sqr) % 10 == 0)) return true;
+    	else return false;
+    }
+    
     public long octagonalNumber(long n) {return n*(3*n-2);}
 
+    public boolean isOctagonalNumber(long t) {
+    	Double sqr = Math.sqrt(4 + 12*t);
+    	if (Math.floor(sqr) == sqr && ((long) (2 + sqr) % 6 == 0)) return true;
+    	else return false;
+    }
+    
     public ArrayList<Long> mersenne(long max) {
     	ArrayList<Long> ans = new ArrayList<>();
     	if (primeSeed < max + 1) findPrimesLessThan(max + 1);
@@ -294,5 +312,5 @@ public class Numbers {
     public long concatenate(long x, long y) {
     	return x * ((int) (Math.pow(10, (int) Math.log10(y) + 1))) + y;
     }
-   
+  
 }
