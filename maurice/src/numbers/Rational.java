@@ -1,5 +1,7 @@
 package numbers;
 
+import java.util.ArrayList;
+
 public class Rational implements Comparable<Rational> {
 	private long num;
 	private long den;
@@ -56,8 +58,31 @@ public class Rational implements Comparable<Rational> {
 		return num;
 	}
 
+	public void setNum(long x) {
+		this.num = x;
+	}
+	
 	public long getDen() {
 		return den;
+	}
+
+	public void setDen(long x) {
+		this.den = x;
+	}
+	
+	public void invert() {
+		long temp = this.num;
+		this.num = this.den;
+		this.den = temp;
+	}
+	
+	public static Rational toRational(ArrayList<Long> x) {
+		Rational ans = new Rational(x.get(x.size() - 1), 1);
+		for (int i = x.size() - 2; i >= 0; i--) {
+			ans.invert();
+			ans.setNum(ans.getDen() * x.get(i) + ans.getNum());
+		}
+		return ans;
 	}
 
 	@Override

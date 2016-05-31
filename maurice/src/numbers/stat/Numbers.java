@@ -2,6 +2,8 @@ package numbers.stat;
 
 import java.math.BigDecimal;
 import java.math.BigInteger;
+import java.math.MathContext;
+import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -14,13 +16,13 @@ public class Numbers {
     private static long primeSeed;
     private static boolean hasMap = true;
 
-    public static boolean abundant(long x) {
+	public static boolean abundant(long x) {
         if (x < 1) return false;
         return x < sumDivisors(x);        
     }
 
-    public static ArrayList<Long> allDivisors(long x) {return allDivisors(x, true);}
-    
+	public static ArrayList<Long> allDivisors(long x) {return allDivisors(x, true);}
+
     public static ArrayList<Long> allDivisors(long x, boolean sorted) {
         ArrayList<Long> fact = findPrimeFactors(x);
         ArrayList<Long> ans = new ArrayList<>();
@@ -38,13 +40,24 @@ public class Numbers {
         if (sorted) Collections.sort(ans);
         return ans;
     }
-
+    
     public static boolean amicable(long x) {
         if (x < 1) return false;
         long t = sumDivisors(x);
         if (x == t) return false;
         return x == sumDivisors(t);
     }
+
+    public static BigDecimal bigE(int p) {
+		BigDecimal e = BigDecimal.ONE;
+		BigDecimal fact = BigDecimal.ONE;
+
+		for(int i=1;i<p;i++) {
+			fact = fact.multiply(new BigDecimal(i));
+			e = e.add(BigDecimal.ONE.divide(fact, new MathContext(10000, RoundingMode.HALF_UP)));
+		}
+		return e;
+	}
 
     private static boolean checkPrime(long x) {
     /**

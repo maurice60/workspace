@@ -22,12 +22,9 @@
 <fullyQualifiedTypeName name="pe047.Work047"/>
 <fullyQualifiedTypeName name="pe048.Work048"/>
 <fullyQualifiedTypeName name="lists.Lists"/>
-<fullyQualifiedTypeName name="java.lang.Integer"/>
 <fullyQualifiedTypeName name="java.lang.Package"/>
 <fullyQualifiedTypeName name="lists.Permutations"/>
-<fullyQualifiedTypeName name="java.awt.Cursor"/>
 <fullyQualifiedTypeName name="numbers.Pascal"/>
-<fullyQualifiedTypeName name="java.lang.Comparable"/>
 <fullyQualifiedTypeName name="files.Files"/>
 <fullyQualifiedTypeName name="pe054.Work54"/>
 <fullyQualifiedTypeName name="pe054.Hand"/>
@@ -46,8 +43,20 @@
 <fullyQualifiedTypeName name="java.lang.String"/>
 <fullyQualifiedTypeName name="pe061.Work61.isType"/>
 <fullyQualifiedTypeName name="java.util.HashMap"/>
-<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.util.Collections"/>
 <fullyQualifiedTypeName name="pe062.Work62"/>
+<fullyQualifiedTypeName name="java.lang.Integer"/>
+<fullyQualifiedTypeName name="java.lang.Comparable"/>
+<fullyQualifiedTypeName name="pe063.Rational"/>
+<fullyQualifiedTypeName name="pe063.Work63"/>
+<fullyQualifiedTypeName name="stat.numbers.Numbers"/>
+<fullyQualifiedTypeName name="numbers.stat.Numbers"/>
+<fullyQualifiedTypeName name="java.math.MathContext"/>
+<fullyQualifiedTypeName name="numbers.Rational"/>
+<fullyQualifiedTypeName name="java.util.ArrayList"/>
 <fullyQualifiedTypeName name="java.math.BigInteger"/>
+<fullyQualifiedTypeName name="numbers.BigRational"/>
+<fullyQualifiedTypeName name="java.math.BigDecimal"/>
+<fullyQualifiedTypeName name="java.math.RoundingMode"/>
+<fullyQualifiedTypeName name="java.awt.Cursor"/>
 </qualifiedTypeNameHistroy>

@@ -19,9 +19,9 @@
 	<section name="org.eclipse.wb.internal.core.editor.actions.assistant.LayoutAssistantWindow">
 	</section>
 	<section name="org.eclipse.wb.internal.core.model.property.editor.string.StringPropertyDialog">
-		<item value="391" key="x"/>
+		<item value="240" key="x"/>
 		<item value="605" key="width"/>
-		<item value="304" key="y"/>
+		<item value="401" key="y"/>
 		<item value="457" key="height"/>
 	</section>
 </section>
