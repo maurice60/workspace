@@ -1,15 +1,16 @@
 package pe064;
 
 import numbers.stat.Numbers;
-import numbers.BigRational;
+import java.math.BigDecimal;
 
-class Work64 {
+public class Work64 {
 	
 	public static long doIt() {
 		long ans = 0;
-		BigRational rat = BigRational.toRational(Numbers.continuedFraction(Numbers.bigE(100), 100));
-		System.out.println(rat);
-		for (char c : rat.getNum().toString().toCharArray()) ans += c - '0';
+		for (int i = 1; i <= 10000; i++) {
+			if (Numbers.continuedFraction(Numbers.sqrt(BigDecimal.valueOf(i), 225)).size() % 2 == 0) ans += 1;
+		}
 		return ans;
 	}
+
 }

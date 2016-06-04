@@ -305,7 +305,8 @@ public class Numbers {
     public static BigDecimal sqrt(BigDecimal n, int s) {
 		BigDecimal TWO = BigDecimal.valueOf(2);
 
-		BigDecimal x = BigDecimal.valueOf(Math.sqrt(n.doubleValue()));
+//		BigDecimal x = BigDecimal.valueOf(Math.sqrt(n.doubleValue()));
+		BigDecimal x = n.divide(BigDecimal.valueOf(2));
 		BigDecimal lastX = x;
 
 		for (int i = 0; i < 50; i++) {
